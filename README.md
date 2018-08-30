@@ -1,4 +1,4 @@
-Blackfriday [![Build Status](https://travis-ci.org/russross/blackfriday.svg?branch=master)](https://travis-ci.org/russross/blackfriday)
+Blackfriday [![Build Status](https://travis-ci.org/rpcavaco/blackfriday.svg?branch=master)](https://travis-ci.org/rpcavaco/blackfriday)
 ===========
 
 Blackfriday is a [Markdown][1] processor implemented in [Go][2]. It
