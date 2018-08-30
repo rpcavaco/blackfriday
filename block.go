@@ -37,6 +37,12 @@ var (
 // the input buffer ends with a newline.
 func (p *Markdown) block(data []byte) {
 	// this is called recursively: enforce a maximum depth
+	
+	// replace CR LF \r\n (windows) with LF \n (unix)
+	data = bytes.Replace(data, []byte{13, 10}, []byte{10}, -1)
+	// replace CF \r (mac) with LF \n (unix)
+	data = bytes.Replace(data, []byte{13}, []byte{10}, -1)
+	
 	if p.nesting >= p.maxNesting {
 		return
 	}
